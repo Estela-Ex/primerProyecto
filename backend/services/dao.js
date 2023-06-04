@@ -2,6 +2,11 @@ const userQueries = require("./mysqlQueries/userQueries");
 const productQueries = require("./mysqlQueries/productQueries")
 const dao = {};
 
+
+// DAO PARA USUARIOS
+
+
+
 // Buscar un usuario por el email
 dao.getUserByEmail = async (email) => await userQueries.getUserByEmail(email);
 // Añadir un nuevo usuario
@@ -22,6 +27,11 @@ dao.addProduct = async (productData) =>
 //
 dao.getProductByReference = async (reference) =>
   await productQueries.getProductByReference(reference);
-    
-    
+
+
+// DAO PARA PRODUCTOS
+dao.productByCategoria = async (categoria) => await productQueries.getProductByCategoria(categoria)
+
+
+
     module.exports = dao;

@@ -4,7 +4,7 @@ const AuthContext = createContext({
     login: () => { },
     logout: () => { },
     user: null,
-    errorMessage: "",
+    
 });
 
 export default function AuthContextProvider({children}) {

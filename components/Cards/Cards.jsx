@@ -9,6 +9,8 @@ import {
 import EuroIcon from "@mui/icons-material/Euro";
 import { useState, useEffect } from "react";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+
+
 let stars = [
   "Estrella 1",
   "Estrella 2",
@@ -17,12 +19,13 @@ let stars = [
   "Estrella 5",
 ];
 
-export default function Cards({ imagen, detallesdelproducto, precio}) {
+export default function Cards() {
   const [products, setProducts] = useState([]);
+  
 
   useEffect(() => {
     console.log("Me renderizo!!!");
-    fetch("http://localhost:3001/productos")
+    fetch(`http://localhost:3001/productos`)
       .then((response) => response.json())
       .then((data) => setProducts(data));
   }, []);
@@ -44,6 +47,7 @@ export default function Cards({ imagen, detallesdelproducto, precio}) {
                 border: "1px solid",
                 borderRadius: "20px",
                 borderStyle: "groove;",
+                
               }}
             >
               <CardHeader key={i} title={productos.nombredelproducto} />
@@ -62,8 +66,7 @@ export default function Cards({ imagen, detallesdelproducto, precio}) {
                 {productos.precio}
                 <EuroIcon fontSize="8" />
                 <br />
-
-                <button color="blue" borderRadius="2px">
+                <button>
                   Añadir al carrito
                   <ShoppingBasketIcon
                     fontSize="18"

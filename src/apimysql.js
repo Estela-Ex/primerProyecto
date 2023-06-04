@@ -11,15 +11,15 @@ app.get("/user/:id",function (request, response){
     
 })
 
-app.listen(8000, function(){
-    console.log("Escuchando al puerto 8000")
+app.listen(3001, function(){
+    console.log("Escuchando al puerto 3001")
 })
 
 
 let connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '12345678m.m3281',
+    password: 'root',
     database: 'ecommerce'
 });
 
@@ -67,3 +67,4 @@ app.get("/productos", function (request, response) {
     }
   );
 });
+

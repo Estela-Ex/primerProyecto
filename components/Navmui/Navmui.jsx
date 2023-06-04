@@ -13,7 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Buscador from "../Buscador/Buscador";
-import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const pages = [
   { nombre: "Categories", link: "/categories" },
@@ -130,15 +130,14 @@ function Navmui() {
             }}
           >
             {pages.map((page) => (
-              <Link to={page.link} key={page.nombre}>
                 <Button
+                  key={page.nombre}
                   href={page.link}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
                   {page.nombre}
                 </Button>
-              </Link>
             ))}
           </Box>
           {user && (
@@ -170,7 +169,7 @@ function Navmui() {
               >
                 {Object.keys(settings).map((setting) => (
                   <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Link to={settings[setting].link} textAlign="center">
+                    <Link to={settings[setting].link} >
                       {settings[setting].label}Logout
                     </Link>
                   </MenuItem>

@@ -9,6 +9,17 @@ productRouter.post("/upload", productController.uploadImage);
 productRouter.get("/image/:id", productController.getImage);
 //añadir producto
 productRouter.post("/", productController.addProduct);
+//buscar productos bbdd por categorias
+productRouter.get("/:categoria", productController.productByCategoria)
+
+
+
+
+
+
+
+
+
 
 
 module.exports = productRouter;

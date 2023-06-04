@@ -2,10 +2,9 @@
 import Garantias from "../../components/Garantias/Garantias";
 import Newsletter from "../../components/Newsletter/Newsletter";
 import Privacidad from "../../components/Privacidad/Privacidad";
-import { Grid} from "@mui/material";
 import Navmui from "../../components/Navmui/Navmui";
 import BasicFormLogin from "../../src/components/BasicFormLogin/BasicFormLogin";
-import BasicFormRegistro from '../../src/components/BasicFormRegistro/BasicFormRegistro'
+import { Grid} from "@mui/material";
 
 export default function Login() {
   return (
@@ -28,7 +27,8 @@ export default function Login() {
             <Newsletter size={52} color={"black"} />
           </Grid>
         </Grid>
-      </footer>
+      </footer> 
+
     </>
   );
 }

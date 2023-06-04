@@ -102,5 +102,18 @@ productController.addProduct = async (req, res) => {
     console.log(e.message);
   }
 };
+// buscar productos por categorias
+productController.productByCategoria = async (req, res) => {
+  const categoria = await dao.productByCategoria(req.params.categoria)
+  try {
+    if (!categoria) {
+      return res.status(400).send("No se ha encontrado la categoria")
+    }
+    return res.send(categoria)
+  } catch (e) {
+    console.log(e.message);
+    return res.status(400).send(e.message);
+  }
+}
 
 module.exports = productController;

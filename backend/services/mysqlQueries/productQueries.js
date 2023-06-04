@@ -86,4 +86,28 @@ productQueries.getProductByReference = async (reference) => {
     conn && (await conn.end());
   }
 };
+//buscar producto por categoria
+productQueries.getProductByCategoria = async (categoria) => {
+  let conn = null;
+  try {
+    conn = await db.createConnection();
+    return await db.query(
+      "SELECT * FROM productos WHERE categoria =?",
+      categoria,
+      "select",
+      conn
+    )
+  } catch (e) {
+    throw new Error(e);
+  } finally {
+    conn && (await conn.end());
+  }
+  
+}
+
+
+
+
+
+
 module.exports = productQueries;

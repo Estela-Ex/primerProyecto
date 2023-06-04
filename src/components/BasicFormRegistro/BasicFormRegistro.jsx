@@ -187,7 +187,7 @@ export default function BasicFormRegistro() {
           Welcome <br></br><span>{newUser}</span><span></span>
         </h6>
       ) : (
-        "dfsf"
+        ""
       )}
     </>
   );

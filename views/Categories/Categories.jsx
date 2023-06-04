@@ -4,7 +4,8 @@ import Garantias from "../../components/Garantias/Garantias";
 import Navmui from "../../components/Navmui/Navmui";
 import Newsletter from "../../components/Newsletter/Newsletter";
 import Privacidad from "../../components/Privacidad/Privacidad";
-import DetailsCategories from "./DetailsCategories";
+
+
 export default function Categories() {
   return (
     <>
@@ -25,19 +26,20 @@ export default function Categories() {
             display: "flex",
             justifyContent: "center",
             columnGap: "4rem",
-            "button": { height: "5rem", p: "0.3rem 0.8rem", width: "12rem" },
+            "button": { height: "5rem", p: "0.3rem 0.8rem", width: "12rem", backgroundColor: "#F8CD8F" },
+            "a":{boxShadow: "6px 6px 2px 1px rgba(0, 0, 0, 0.2)"}
           }}
         >
-          <Link to={"/DetailsCategories"}>
-            <button>Fantastico y Ciencia Ficcion</button>
+          <Link to={"/DetailsCategories/1"}>
+            <button >Fantastico y Ciencia Ficcion</button>
+            </Link>
+          <Link to={"/DetailsCategories/2"}>
+            <button >Accion y Aventuras</button>
           </Link>
-          <Link to={"/DetailsCategories"}>
-            <button>Accion y Aventuras</button>
-          </Link>
-          <Link to={"/DetailsCategories"}>
+          <Link to={"/DetailsCategories/3"}>
             <button>Series Tv</button>
           </Link>
-          <Link to={"/DetailsCategories"}>
+          <Link to={"/DetailsCategories/4"}>
             <button>Drama</button>
           </Link>
         </Grid>
@@ -49,19 +51,20 @@ export default function Categories() {
             display: "flex",
             justifyContent: "center",
             columnGap: "4rem",
-            "button": { height: "5rem", p: "0.3rem 0.8rem", width: "12rem" },
+            "button": { height: "5rem", p: "0.3rem 0.8rem", width: "12rem", backgroundColor: "#F8CD8F" },
+            "a":{boxShadow: "6px 6px 2px 1px rgba(0, 0, 0, 0.2)"}
           }}
         >
-          <Link to={"/DetailsCategories"}>
+          <Link to={"/DetailsCategories/5"}>
             <button>Anime</button>
           </Link>
-          <Link to={"/DetailsCategories"}>
+          <Link to={"/DetailsCategories/6"}>
             <button>Terror</button>
           </Link>
-          <Link to={"/DetailsCategories"}>
+          <Link to={"/DetailsCategories/7"}>
             <button>Infantil</button>
           </Link>
-          <Link to={"/DetailsCategories"}>
+          <Link to={"/DetailsCategories/8"}>
             <button>Comedia</button>
           </Link>
         </Grid>
