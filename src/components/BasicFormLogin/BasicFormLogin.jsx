@@ -40,7 +40,7 @@ export default function BasicFormLogin() {
         >
           <TextField
             id="email"
-            label="Enter your email"
+            label="Introduce tu email"
             type="email"
             value={values.email}
             onChange={handleChange}
@@ -52,7 +52,7 @@ export default function BasicFormLogin() {
           />
           <TextField
             id="password"
-            label="Enter your password"
+            label="Introduce tu contraseña"
             type="password"
             value={values.password}
             onChange={handleChange}
@@ -76,8 +76,7 @@ export default function BasicFormLogin() {
         </Box>
       </form>
       <Link to={"/Registre"}>¿Aun sin cuenta?Registrate</Link>
-      {user ? <span>Holaaaaaaaaaaa</span> : ""}
-      {/* <pre>{JSON.stringify({ values, errors }, null, 1)}</pre> */}
     </>
-  );
-}
+      )
+    }
+    {/* <pre>{JSON.stringify({ values, errors }, null, 1)}</pre> */}

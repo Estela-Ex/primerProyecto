@@ -14,18 +14,19 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Buscador from "../Buscador/Buscador";
 import { Link } from "react-router-dom";
+import { useAuthContext } from "../../src/context/AuthContext";
+
 
 const pages = [
-  { nombre: "Categories", link: "/categories" },
-  { nombre: "Cart", link: "/Cart" },
+  { nombre: "Categorias", link: "/categories" },
   { nombre: "Login", link: "/Login" }
 ];
-const settings = { nombre:"Logout",link:"/"} ;
+const settings =  [{nombre:"Logout"}] ;
 
 function Navmui() {
-  const user = "estela";
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const { logout, user } = useAuthContext()
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -42,6 +43,7 @@ function Navmui() {
     setAnchorElUser(null);
   };
 
+  
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -130,14 +132,15 @@ function Navmui() {
             }}
           >
             {pages.map((page) => (
+              <Link to={page.link} style={{textDecoration:'none'}}>
                 <Button
                   key={page.nombre}
-                  href={page.link}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
                   {page.nombre}
                 </Button>
+                </Link>
             ))}
           </Box>
           {user && (
@@ -168,12 +171,12 @@ function Navmui() {
                 onClose={handleCloseUserMenu}
               >
                 {Object.keys(settings).map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                  <MenuItem key={setting} onClick={logout}>
                     <Link to={settings[setting].link} >
                       {settings[setting].label}Logout
                     </Link>
                   </MenuItem>
-                ))}
+                 ))}
               </Menu>
             </Box>
           )}

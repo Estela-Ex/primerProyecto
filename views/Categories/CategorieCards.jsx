@@ -23,7 +23,7 @@ export default function CategorieCards({categoria}) {
     <>
       {result?.map((productos, i) => {
         return (
-          <Grid key={i} item xs={3}>
+          <Grid key={i} item xs={12} sm={6} md={4} xl={3} >
             <Card
               sx={{
                 maxWidth: 345,
@@ -46,7 +46,7 @@ export default function CategorieCards({categoria}) {
               />
               <Typography variant="subtitle" color="primary"></Typography>
               <CardContent>
-                <Typography sx={{ "p": { height: "6rem", overflow: "auto", overflowX: "unset" }}} variant="body2" color="text.secondary">
+                <Typography sx={{ "p": { height: "6rem", overflowY: "auto" }}} variant="body2" color="text.secondary">
                   {productos.detallesdelproducto}
                 </Typography>
                 <br />

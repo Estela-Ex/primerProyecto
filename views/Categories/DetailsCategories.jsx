@@ -20,7 +20,7 @@ export default function DetailsCategories() {
       <Typography sx={{ p: 4, m: "3rem 0 0 0" }} align="center" variant="h4">
         Todas tus peliculas en blue-Ray
       </Typography>
-      <Grid container sx={{ rowGap: 8, p: 2}}>
+      <Grid container sx={{ p: 2}}>
         <CategorieCards categoria={params.categoria}/>
       </Grid>
       <Garantias />

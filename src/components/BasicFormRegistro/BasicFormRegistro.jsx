@@ -44,7 +44,7 @@ export default function BasicFormRegistro() {
   return (
     <>
       <Typography variant="h5" sx={{ textAlign: "center" }}>
-        Register
+        Registro
       </Typography>
       <form onSubmit={handleSubmit}>
         <Box
@@ -60,7 +60,7 @@ export default function BasicFormRegistro() {
             <TextField
               id="firstname"
               name="firstname"
-              label="Enter your fistname"
+              label="Introduce tu nombre"
               type="firstname"
               value={values.firstname}
               onChange={handleChange}
@@ -73,7 +73,7 @@ export default function BasicFormRegistro() {
             <TextField
               id="lastname"
               name="lastname"
-              label="Enter your lastname"
+              label="Introduce tus apellidos"
               type="lastname"
               value={values.lastname}
               onChange={handleChange}
@@ -88,7 +88,7 @@ export default function BasicFormRegistro() {
             <TextField
               id="address"
               name="address"
-              label="Enter your address"
+              label="Introduce tu dirección"
               type="address"
               value={values.address}
               onChange={handleChange}
@@ -101,7 +101,7 @@ export default function BasicFormRegistro() {
             <TextField
               id="city"
               name="city"
-              label="Enter your city"
+              label="Introduce tu ciudad"
               type="city"
               value={values.city}
               onChange={handleChange}
@@ -116,7 +116,7 @@ export default function BasicFormRegistro() {
             <TextField
               id="postalCode"
               name="postalCode"
-              label="Enter your postal Code"
+              label="Introduce tu codigo postal"
               type="postalCode"
               value={values.postalCode}
               onChange={handleChange}
@@ -129,7 +129,7 @@ export default function BasicFormRegistro() {
             <TextField
               id="email"
               name="email"
-              label="Enter your email"
+              label="Introduce tu email"
               type="email"
               value={values.email}
               onChange={handleChange}
@@ -144,7 +144,7 @@ export default function BasicFormRegistro() {
             <TextField
               id="password"
               name="password"
-              label="Enter your password"
+              label="Introduce tu contraseña"
               type="password"
               value={values.password}
               onChange={handleChange}
@@ -157,7 +157,7 @@ export default function BasicFormRegistro() {
             <TextField
               id="passwordRepeat"
               name="passwordRepeat"
-              label="Repeat your password"
+              label="Introduce tu contraseña"
               type="password"
               value={values.passwordRepeat}
               onChange={handleChange}
