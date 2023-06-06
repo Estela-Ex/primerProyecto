@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import Garantias from "../../components/Garantias/Garantias";
 import Navmui from "../../components/Navmui/Navmui";
@@ -8,6 +8,7 @@ import Privacidad from "../../components/Privacidad/Privacidad";
 
 export default function Categories() {
   return (
+    <Box className="background-image"sx={{ backgroundImage: 'url("../../src/assets/marvel.jpg")'}}>
     <>
       <Grid container spacing={2} justifyContent="center" alignItems="center">
         <Grid item xl={12}>
@@ -27,12 +28,12 @@ export default function Categories() {
             justifyContent: "center",
             columnGap: "4rem",
             "button": { height: "5rem", p: "0.3rem 0.8rem", width: "12rem", backgroundColor: "#F8CD8F" },
-            "a":{boxShadow: "6px 6px 2px 1px rgba(0, 0, 0, 0.2)"}
+            "a": { boxShadow: "6px 6px 2px 1px rgba(0, 0, 0, 0.2)" }
           }}
         >
           <Link to={"/DetailsCategories/1"}>
             <button >Fantastico y Ciencia Ficcion</button>
-            </Link>
+          </Link>
           <Link to={"/DetailsCategories/2"}>
             <button >Accion y Aventuras</button>
           </Link>
@@ -52,7 +53,7 @@ export default function Categories() {
             justifyContent: "center",
             columnGap: "4rem",
             "button": { height: "5rem", p: "0.3rem 0.8rem", width: "12rem", backgroundColor: "#F8CD8F" },
-            "a":{boxShadow: "6px 6px 2px 1px rgba(0, 0, 0, 0.2)"}
+            "a": { boxShadow: "6px 6px 2px 1px rgba(0, 0, 0, 0.2)" }
           }}
         >
           <Link to={"/DetailsCategories/5"}>
@@ -82,6 +83,7 @@ export default function Categories() {
           </Grid>
         </Grid>
       </footer>
-    </>
+      </>
+   </Box>
   );
 }

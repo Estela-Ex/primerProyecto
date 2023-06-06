@@ -31,6 +31,7 @@ dao.getProductByReference = async (reference) =>
 
 // DAO PARA PRODUCTOS
 dao.productByCategoria = async (categoria) => await productQueries.getProductByCategoria(categoria)
+dao.productByTipoproducto = async(tipoproducto) => await productQueries.getProductByTipoproducto(tipoproducto)
 
 
 

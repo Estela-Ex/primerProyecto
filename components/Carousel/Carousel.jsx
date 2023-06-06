@@ -1,71 +1,25 @@
-import Carousel from 'react-bootstrap/Carousel';
 
-export default function UncontrolledExample({images}) {
+import Carousel from 'react-bootstrap/Carousel'
+
+export default function Caroussel() {
+    let images = [{nombre:"spiderman",src:"../../src/assets/spiderman.jpg"},{nombre:"transformes",src:"../../src/assets/transformes.jpeg"},{nombre:"star wars",src:"../../src/assets/star wars.jpg"}]
   return (
+      <>
     <Carousel>
-      {images.map((image,i) =>{
-        return(
-        <Carousel.Item key={i}>
+      {images?.map((image) => (
+        <Carousel.Item>
         <img
-          className="d-block w-100"
-          src={image.imagen}
-          alt={image.nombre}
-          width="1920px"
-          height="1280"
-  
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-        )
-      })}
-      
-      
-    </Carousel>
-  );
-}
-
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import { Carousel } from "react-responsive-carousel";
-
-// export function Caroussel({ images }) {
-//   return (
-//     <Carousel>
-//       {images.map((image) => (
-//         <div>
-//           <img src={image.src} />
-//           <p className="legend">{image.alt}</p>
-//         </div>
-//       ))}
-//     </Carousel>
-//   );
-// }
-
-/* <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={imagen}
+          className="imagen-slider"
+          src={image.src}
           alt="Second slide"
-        />
-
+          />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Las mejores peliculas del 2023</h3>
+          <p>a un boton de tenerlas en casa</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={imagen}
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item> */
+          ))}
+          </Carousel>
+      </>
+ )
+}

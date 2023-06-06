@@ -116,4 +116,17 @@ productController.productByCategoria = async (req, res) => {
   }
 }
 
+//buscar productos por tipo
+productController.productByTipoproducto = async (req, res) => {
+  const categoria = await dao.productByTipo(req.params.categoria)
+  try {
+    if (!categoria) {
+      return res.status(400).send("No se ha encontrado el tipo")
+    }
+    return res.send(categoria)
+  } catch (e) {
+    console.log(e.message);
+    return res.status(400).send(e.message);
+  }
+}
 module.exports = productController;

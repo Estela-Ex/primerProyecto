@@ -1,0 +1,14 @@
+.imagen-slider {
+  width: 1900px;
+  height: 900px;
+}
+.background-image {
+  background-image: 'url("../../src/assets/marvel.jpg")';
+  background-image: no-repeat;
+  background-image: fixed;
+  background-image: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

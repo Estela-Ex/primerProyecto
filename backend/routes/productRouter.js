@@ -11,7 +11,8 @@ productRouter.get("/image/:id", productController.getImage);
 productRouter.post("/", productController.addProduct);
 //buscar productos bbdd por categorias
 productRouter.get("/:categoria", productController.productByCategoria)
-
+//buscar productos por tipo
+productRouter.get("/:tipo", productController.productByTipoproducto)
 
 
 

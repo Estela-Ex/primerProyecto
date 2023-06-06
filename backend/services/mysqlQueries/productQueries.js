@@ -105,7 +105,23 @@ productQueries.getProductByCategoria = async (categoria) => {
   
 }
 
-
+productQueries.getProductByTipoproducto = async (tipoproducto) => {
+  let conn = null;
+  try {
+    conn = await db.createConnection();
+    return await db.query(
+      "SELECT * FROM productos WHERE tipoproducto =?",
+      tipoproducto,
+      "select",
+      conn
+    )
+  } catch (e) {
+    throw new Error(e);
+  } finally {
+    conn && (await conn.end());
+  }
+  
+}
 
 
 

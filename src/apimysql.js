@@ -54,6 +54,7 @@ app.get("/clientes", function(request, response) {
   });
 
 });
+
 app.get("/productos", function (request, response) {
   connection.query(
     "SELECT * FROM productos",
@@ -67,4 +68,3 @@ app.get("/productos", function (request, response) {
     }
   );
 });
-

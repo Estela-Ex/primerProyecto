@@ -4,6 +4,7 @@ import Cards from "../../components/Cards/Cards";
 import Navmui from "../../components/Navmui/Navmui";
 import Garantias from "../../components/Garantias/Garantias";
 import { Grid, Typography } from "@mui/material";
+import Carousel  from "../../components/Carousel/Carousel";
 
 
 
@@ -15,9 +16,10 @@ export default function Home() {
           <Navmui />
         </Grid>
       </Grid>
-      <Typography sx={{p:4}} align="center" variant="h4">PRODUCTOS DESTACADOS</Typography>
+      <Typography sx={{ p: 4 }} align="center" variant="h4">PRODUCTOS DESTACADOS</Typography>
+      <Carousel/>
       <Grid container spacing={4}>
-        <Cards />
+        {/* <Cards /> */}
       </Grid>
       <Garantias size={48} color={"pink"} />
       <footer>
