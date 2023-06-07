@@ -25,6 +25,7 @@ userQueries.getUserByEmail = async (email) => {
 };
 
 userQueries.addUser = async (userData) => {
+  console.log(userData);
   let conn = null;
   try {
     conn = await db.createConnection();
@@ -45,7 +46,9 @@ userQueries.addUser = async (userData) => {
       "insert",
       conn
     );
+    
   } catch (e) {
+    console.log(e);
     throw new Error(e);
   } finally {
     conn && (await conn.end());
