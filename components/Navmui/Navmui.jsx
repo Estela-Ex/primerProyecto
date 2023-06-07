@@ -45,7 +45,7 @@ function Navmui() {
 
   
   return (
-    <AppBar position="static">
+    <AppBar sx={{backgroundColor:"#4c4d4e"}} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />

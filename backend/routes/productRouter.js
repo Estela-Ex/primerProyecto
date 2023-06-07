@@ -12,9 +12,9 @@ productRouter.post("/", productController.addProduct);
 //buscar productos bbdd por categorias
 productRouter.get("/:categoria", productController.productByCategoria)
 //buscar productos por tipo
-productRouter.get("/:tipo", productController.productByTipoproducto)
-
-
+productRouter.get("/tipo/:tipoproducto", productController.productByTipoproducto)
+//buscar productos por nombre
+productRouter.get("/pelicula/:nombredelproducto", productController.getProductByPelicula)
 
 
 

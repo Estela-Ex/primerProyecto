@@ -118,12 +118,26 @@ productController.productByCategoria = async (req, res) => {
 
 //buscar productos por tipo
 productController.productByTipoproducto = async (req, res) => {
-  const categoria = await dao.productByTipo(req.params.categoria)
+  const tipoproducto = await dao.productByTipoproducto(req.params.tipoproducto)
   try {
-    if (!categoria) {
-      return res.status(400).send("No se ha encontrado el tipo")
+    if (!tipoproducto) {
+      return res.status(400).send("No se ha encontrado el tipo de producto")
     }
-    return res.send(categoria)
+    return res.send(tipoproducto)
+  } catch (e) {
+    console.log(e.message);
+    return res.status(400).send(e.message);
+  }
+}
+
+//buscar producto por nombre
+productController.getProductByPelicula = async (req, res) => {
+  const pelicula = await dao.getProductByPelicula(req.params.nombredelproducto)
+  try {
+    if (!pelicula) {
+      return res.status(400).send("No se ha encontrado el nombre del producto")
+    }
+    return res.send(pelicula)
   } catch (e) {
     console.log(e.message);
     return res.status(400).send(e.message);

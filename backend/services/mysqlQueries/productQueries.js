@@ -123,6 +123,23 @@ productQueries.getProductByTipoproducto = async (tipoproducto) => {
   
 }
 
+productQueries.getProductByPelicula = async (pelicula) => {
+  let conn = null;
+  try {
+    conn = await db.createConnection();
+    return await db.query(
+      "SELECT * FROM productos WHERE nombredelproducto =?",
+      pelicula,
+      "select",
+      conn
+    )
+  } catch (e) {
+    throw new Error(e);
+  } finally {
+    conn && (await conn.end());
+  }
+  
+}
 
 
 

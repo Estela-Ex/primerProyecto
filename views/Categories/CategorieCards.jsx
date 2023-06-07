@@ -12,8 +12,7 @@ import { useEffect} from "react";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { useProductContext } from "../../src/context/ProductContext";
 
-export default function CategorieCards({categoria}) {
- 
+export default function CategorieCards({categoria=null,tipoproducto=null}) {
   const {result, categoriaFetch} = useProductContext()
   useEffect(() => { 
       categoriaFetch(categoria)
@@ -21,7 +20,7 @@ export default function CategorieCards({categoria}) {
     
   return (
     <>
-      {result?.map((productos, i) => {
+      {(result||tipoproducto)?.map((productos, i) => {
         return (
           <Grid key={i} item xs={12} sm={6} md={4} xl={3} >
             <Card
@@ -34,7 +33,7 @@ export default function CategorieCards({categoria}) {
                 borderStyle: "groove",
                 ".title": { padding: "0", textAlign: "center" },
                 boxShadow:" 6px 6px 10px 1px grey",
-                backgroundColor: "#95b39b"
+                backgroundColor: "#5b5b5b"
 
               }}
             >
@@ -46,7 +45,7 @@ export default function CategorieCards({categoria}) {
               />
               <Typography variant="subtitle" color="primary"></Typography>
               <CardContent>
-                <Typography sx={{ "p": { height: "6rem", overflowY: "auto" }}} variant="body2" color="text.secondary">
+                <Typography sx={{ "p": { height: "6rem", overflowY: "auto" }}} variant="body2" color="#fff">
                   {productos.detallesdelproducto}
                 </Typography>
                 <br />

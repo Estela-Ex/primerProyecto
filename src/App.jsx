@@ -12,6 +12,7 @@ import PrivateRoute from "./routes/PrivateRoutes";
 import "./App.css";
 
 import ProductContextProvider from "./context/ProductContext";
+import Search from "../views/Search/Search";
 
 const allowedRoles = { admin: 0, user: 1 };
 
@@ -34,6 +35,7 @@ function App() {
                   path="/DetailsCategories/:categoria"
                   element={<DetailsCategories />}
                 />
+                <Route path="/search/:pelicula" element={<Search />} />
                 {/* </Route> */}
               </Routes>
             </div>

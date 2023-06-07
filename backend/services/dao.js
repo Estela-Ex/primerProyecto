@@ -32,7 +32,7 @@ dao.getProductByReference = async (reference) =>
 // DAO PARA PRODUCTOS
 dao.productByCategoria = async (categoria) => await productQueries.getProductByCategoria(categoria)
 dao.productByTipoproducto = async(tipoproducto) => await productQueries.getProductByTipoproducto(tipoproducto)
-
+dao.getProductByPelicula = async(pelicula) => await productQueries.getProductByPelicula(pelicula)
 
 
     module.exports = dao;

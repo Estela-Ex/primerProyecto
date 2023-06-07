@@ -30,7 +30,7 @@ export default function Newsletter({ color }) {
           <Button
             variant="contained"
             size="large"
-            sx={{ backgroundColor: "#0164c9", mt: 2, mb: 2 }}
+            sx={{ backgroundColor: "#4c4d4e", mt: 2, mb: 2 }}
           >
             Suscríbete
           </Button>

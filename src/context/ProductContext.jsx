@@ -2,10 +2,14 @@ import { useContext, useState, createContext } from 'react'
 
 const ProductContext = createContext({
     result: "",
-    categoriaFetch: () => { }
+    categoriaFetch: () => { },
+    tipoProductoFetch: () => { }
 })
 export default function ProductContextProvider({ children }) {
     const [result, setResult] = useState(null)
+    const [recomendado, setRecomendado] = useState(null)
+    const [tendencia, setTendencia] = useState(null)
+    const [masvendidos, setMasVendidos] = useState(null)
 
     async function categoriaFetch(categoria) {
         const response = await fetch(`http://localhost:3001/product/${categoria}`)
@@ -14,9 +18,28 @@ export default function ProductContextProvider({ children }) {
             setResult(data)
         }
     }
+    async function tipoProductoFetch(tipoproducto) {
+        const response = await fetch(`http://localhost:3001/product/tipo/${tipoproducto}`)
+        const data = await response.json()
+        if (tipoproducto === 1) {
+            setRecomendado(data)
+        }
+        if (tipoproducto === 2) {
+            setTendencia(data)
+        }
+        if (tipoproducto === 3) {
+            setMasVendidos(data)
+        }
+
+    }
+
     const value = {
         result,
-        categoriaFetch
+        categoriaFetch,
+        tipoProductoFetch,
+        recomendado,
+        tendencia,
+        masvendidos
     }
     return <ProductContext.Provider value={value}>{children}</ProductContext.Provider>
 }
