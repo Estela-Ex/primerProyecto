@@ -128,11 +128,13 @@ productQueries.getProductByPelicula = async (pelicula) => {
   try {
     conn = await db.createConnection();
     return await db.query(
-      "SELECT * FROM productos WHERE nombredelproducto =?",
+     
+      "SELECT * FROM productos WHERE nombredelproducto =  ? ",
       pelicula,
       "select",
       conn
     )
+       
   } catch (e) {
     throw new Error(e);
   } finally {

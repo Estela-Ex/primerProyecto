@@ -27,7 +27,7 @@ import {
                   borderStyle: "groove",
                   ".title": { padding: "0", textAlign: "center" },
                   boxShadow:" 6px 6px 10px 1px grey",
-                  backgroundColor: "#4c4d4e"
+                  backgroundColor: "#cdc8c8"
   
                 }}
               >
@@ -37,9 +37,9 @@ import {
                   height="280"
                   image={productos.imagen}
                 />
-                <Typography variant="subtitle" color="primary"></Typography>
+                <Typography variant="subtitle" color="#fff"></Typography>
                 <CardContent>
-                  <Typography sx={{ "p": { height: "6rem", overflowY: "auto" }}} variant="body2" color="text.secondary">
+                  <Typography sx={{ "p": { height: "6rem", overflowY: "auto" }}} variant="body2" color="#fff">
                     {productos.detallesdelproducto}
                   </Typography>
                   <br />

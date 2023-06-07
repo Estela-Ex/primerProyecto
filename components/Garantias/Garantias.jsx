@@ -7,26 +7,26 @@ export default function Garantias({ size, color }) {
   return (
     <Grid container sx={{ p: 4 }} alignContent="center" justifyContent="center">
       <Grid item xl={2} display="flex" alignItems="center">
-        <GppGoodIcon fontSize="large" color="" />
-        <Typography variant="h6" sx={{ textAlign: "center" }}>
+        <GppGoodIcon fontSize="large" sx={{color:"#fff"}} />
+        <Typography variant="h6" sx={{ textAlign: "center", color:"white" }}>
           Pago seguro
         </Typography>
       </Grid>
       <Grid item xl={2} display="flex" alignItems="center">
-        <LocalShippingIcon fontSize="large" color="#4c4d4e" />
-        <Typography variant="h6" sx={{ textAlign: "center" }}>
+        <LocalShippingIcon fontSize="large" sx={{color:"#fff"}} />
+        <Typography variant="h6" sx={{ textAlign: "center",color:"white" }}>
           Envio gratuito
         </Typography>
       </Grid>
       <Grid item xl={2} display="flex" alignItems="center">
-        <LocalOfferIcon fontSize="large" color="#4c4d4e" />
-        <Typography variant="h6" sx={{ textAlign: "center" }}>
+        <LocalOfferIcon fontSize="large" sx={{color:"#fff"}}  />
+        <Typography variant="h6" sx={{ textAlign: "center",color:"white" }}>
           Mejores ofertas
         </Typography>
       </Grid>
       <Grid item xl={2} display="flex" alignItems="center">
-        <BookmarkIcon fontSize="large" color="#4c4d4e" />
-        <Typography variant="h6" sx={{ textAlign: "center" }}>
+        <BookmarkIcon fontSize="large" sx={{color:"#fff"}} />
+        <Typography variant="h6" sx={{ textAlign: "center",color:"white" }}>
           2 años de garantía
         </Typography>
       </Grid>

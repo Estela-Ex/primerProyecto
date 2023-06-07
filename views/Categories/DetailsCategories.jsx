@@ -17,7 +17,7 @@ export default function DetailsCategories() {
           <Navmui />
         </Grid>
       </Grid>
-      <Typography sx={{ p: 4, m: "3rem 0 0 0" }} align="center" variant="h4">
+      <Typography sx={{ p: 4, m: "3rem 0 0 0" }} align="center" variant="h4" color={"white"}>
         Todas tus peliculas en blue-Ray
       </Typography>
       <Grid container sx={{ p: 2}}>
@@ -25,7 +25,7 @@ export default function DetailsCategories() {
       </Grid>
       <Garantias />
       <footer>
-        <Grid container sx={{ backgroundColor: "#394F65;" }}>
+        <Grid container sx={{ backgroundColor: "#4c4d4e" }}>
           <Grid item xs={6} sx={{ pl: 20, pt: 10, pb: 10 }}>
             <Privacidad />
           </Grid>

@@ -9,6 +9,7 @@ import Newsletter from "../../components/Newsletter/Newsletter";
 import Navmui from "../../components/Navmui/Navmui";
 
 export default function Search() {
+    <img src="../../src/assets/fondo.png"/>
     const [result, setResult] = useState(null)
     const params = useParams()
     useEffect(() => {

@@ -19,7 +19,7 @@ export default function Login() {
       </Grid>
       <Garantias size={48} color={"pink"} />
       <footer>
-        <Grid container sx={{ backgroundColor: "#1C4E81;" }}>
+        <Grid container sx={{ backgroundColor: "#4c4d4e;" }}>
           <Grid item xs={6} sx={{ pl: 20, pt: 10, pb: 10 }}>
             <Privacidad size={28} />
           </Grid>

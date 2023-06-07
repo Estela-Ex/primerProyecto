@@ -33,7 +33,7 @@ export default function CategorieCards({categoria=null,tipoproducto=null}) {
                 borderStyle: "groove",
                 ".title": { padding: "0", textAlign: "center" },
                 boxShadow:" 6px 6px 10px 1px grey",
-                backgroundColor: "#5b5b5b"
+                backgroundColor: "#cdc8c8"
 
               }}
             >
