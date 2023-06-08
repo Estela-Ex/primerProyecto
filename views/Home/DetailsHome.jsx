@@ -9,18 +9,11 @@ export default function DetailsHome() {
     const { tipoProductoFetch, recomendado, tendencia, masvendidos } = useProductContext()
     useEffect(() => {
         tipoProductoFetch(1)
-
-    }, [])
-    useEffect(() => {
-
         tipoProductoFetch(2)
-
-    }, [])
-    useEffect(() => {
-
         tipoProductoFetch(3)
-    }, [])
 
+    }, [])
+    
     return (
         <Box sx={{margin:"0 auto",width:"90%"}}>
             <Typography

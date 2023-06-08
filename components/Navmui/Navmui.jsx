@@ -142,7 +142,9 @@ function Navmui() {
                 </Button>
                 </Link>
             ))}
-            <Carrito />
+            <Box >
+              <Carrito />
+              </Box>
           </Box>
           {user && (
             <Box sx={{ flexGrow: 0 }}>

@@ -10,7 +10,7 @@ export default function Carrito() {
   return (
 
 
-    <Link to={"/Cart"}> <Button variant="contained" size="large" endIcon={<Badge badgeContent={carrito} color="secondary" sx={{ backgroundColor: "grey" }}><ShoppingCartIcon /></Badge>} sx={{ m: 2, mt: 5, ml: "25%" }}> Carrito</Button></Link>
+    <Link to={"/Cart"}> <Button variant="contained" size="large" endIcon={<Badge badgeContent={carrito} color="secondary" sx={{ backgroundColor: "grey" }}><ShoppingCartIcon /></Badge>} sx={{ m: 2, ml: "200%" }}> Carrito</Button></Link>
   )
 }
 

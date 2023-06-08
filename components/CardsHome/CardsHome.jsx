@@ -52,12 +52,12 @@ export default function CategorieCards({ tipoproducto }) {
                 <Box sx={{
                   display: "flex", alignItems: "center", "button": {
                     borderRadius: "6px", marginRight: "1rem", width: "10rem", display: "flex", alignItems: "center", ":hover": {
-                      backgroundColor: "#547963",
+                      backgroundColor: "grey",
                       color: "white"
                     }
                   }, "svg": { marginLeft: "0.5rem" }
                 }}>
-                  <button  onClick={()=>Cart('+')}>
+                  <button  onClick={()=>Cart(productos)}>
                     Añadir al carrito
                     <ShoppingBasketIcon
                       fontSize="18"
