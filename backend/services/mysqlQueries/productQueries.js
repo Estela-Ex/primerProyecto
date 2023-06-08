@@ -125,16 +125,14 @@ productQueries.getProductByTipoproducto = async (tipoproducto) => {
 
 productQueries.getProductByPelicula = async (pelicula) => {
   let conn = null;
+  const peliculaSeparada = pelicula.split(" ")
   try {
     conn = await db.createConnection();
-    return await db.query(
+    for (let i = 0; i < peliculaSeparada.length; i++) {
+      return await db.query(
      
-      "SELECT * FROM productos WHERE nombredelproducto =  ? ",
-      pelicula,
-      "select",
-      conn
-    )
-       
+        `SELECT * FROM productos WHERE (nombredelproducto LIKE ?)`, `%${peliculaSeparada}%`, 'select', conn)
+    }  
   } catch (e) {
     throw new Error(e);
   } finally {

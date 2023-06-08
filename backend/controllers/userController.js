@@ -25,15 +25,17 @@ controller.addUser = async(req, res) => {
 };
  // Controlador para el login de un usuario
 controller.loginUser = async (req, res) => {
+
   const { email, password } = req.body;
+  console.log(email,password);
   // Si no alguno de estos campos recibidos por el body devolvemos un 400 (bad request)
   if (!email || !password)
     return res.status(400).send("Error al recibir el body");
-
-  try {
-    let user = await dao.getUserByEmail(email);
-    // Si no existe el usuario respondemos con un 404 (not found)
-    if (user.length === 0) return res.status(404).send("usuario no registrado");
+    try {
+      let user = await dao.getUserByEmail(email);
+      // Si no existe el usuario respondemos con un 404 (not found)
+      console.log(user);
+      if (user.length === 0) return res.status(404).send("usuario no registrado");
     // Pasamos md5 a la paswword recibida del cliente
     const clienPassword = md5(password);
     // Como la consulta a la base de datos nos devuelve un array con el objeto del usuario usamos la desestructuración.

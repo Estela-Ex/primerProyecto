@@ -13,35 +13,40 @@ import "./App.css";
 
 import ProductContextProvider from "./context/ProductContext";
 import Search from "../views/Search/Search";
+import CartContextProvider from "./context/CartContext";
+import Cart from "../views/Cart/Cart";
 
 const allowedRoles = { admin: 0, user: 1 };
 
 function App() {
   return (
     <BrowserRouter>
-      <AuthContextProvider>
-        <ProductContextProvider>
-          <ThemeProvider theme={theme}>
-            <div className="App">
-              <Routes>
-                {/* <Route element={<PublicRoutes />}> */}
-                <Route path="/" element={<Home />} />
-                {/* </Route> */}
-                {/* <Route element={<PrivateRoute allowedRoles={[allowedRoles.user]} />}> */}
-                <Route path="/Login" element={<Login />} />
-                <Route path="/Registre" element={<Registre />} />
-                <Route path="/Categories" element={<Categories />} />
-                <Route
-                  path="/DetailsCategories/:categoria"
-                  element={<DetailsCategories />}
-                />
-                <Route path="/search/:pelicula" element={<Search />} />
-                {/* </Route> */}
-              </Routes>
-            </div>
-          </ThemeProvider>
-        </ProductContextProvider>
-      </AuthContextProvider>
+      <ThemeProvider theme={theme}>
+        <AuthContextProvider>
+          <CartContextProvider>
+            <ProductContextProvider>
+              <div className="App">
+                <Routes>
+                  {/* <Route element={<PublicRoutes />}> */}
+                  <Route path="/" element={<Home />} />
+                  {/* </Route> */}
+                  {/* <Route element={<PrivateRoute allowedRoles={[allowedRoles.user]} />}> */}
+                  <Route path="/Login" element={<Login />} />
+                  <Route path="/Registre" element={<Registre />} />
+                  <Route path="/Categories" element={<Categories />} />
+                  <Route
+                    path="/DetailsCategories/:categoria"
+                    element={<DetailsCategories />}
+                  />
+                  <Route path="/Cart" element={<Cart/>}/>
+                  <Route path="/search/:pelicula" element={<Search />} />
+                  {/* </Route> */}
+                </Routes>
+              </div>
+            </ProductContextProvider>
+          </CartContextProvider>
+        </AuthContextProvider>
+      </ThemeProvider>
     </BrowserRouter>
   );
 }

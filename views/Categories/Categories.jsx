@@ -8,82 +8,82 @@ import Privacidad from "../../components/Privacidad/Privacidad";
 
 export default function Categories() {
   return (
-    <Box className="background-image"sx={{ backgroundImage: 'url("../../src/assets/marvel.jpg")'}}>
-    <>
-      <Grid container spacing={2} justifyContent="center" alignItems="center">
-        <Grid item xl={12}>
-          <Navmui />
+    <Box className="background-image" sx={{ backgroundImage: 'url("../../src/assets/marvel.jpg")' }}>
+      <>
+        <Grid container spacing={2} justifyContent="center" alignItems="center">
+          <Grid item xl={12}>
+            <Navmui />
+          </Grid>
         </Grid>
-      </Grid>
-      <Typography sx={{ p: 4, m: "3rem 0" }} align="center" variant="h4" color={"#fff"}>
-        Todas tus peliculas en blue-Ray
-      </Typography>
-      <Grid container sx={{ rowGap: 8, p: 2, m: "4rem 0" }}>
-        <Grid
-          item
-          xs={12}
-          sx={{
-            height: "5rem",
-            display: "flex",
-            justifyContent: "center",
-            columnGap: "4rem",
-            "button": { height: "5rem", p: "0.3rem 0.8rem", width: "12rem", backgroundColor: "#918c85", color:"white" },
-            "a": { boxShadow: "6px 6px 2px 1px rgba(0, 0, 0, 0.2)" }
-          }}
-        >
-          <Link to={"/DetailsCategories/1"} >
+        <Typography sx={{ p: 4, m: "3rem 0" }} align="center" variant="h4" color={"#fff"}>
+          Todas tus peliculas en blue-Ray
+        </Typography>
+        <Grid container sx={{ rowGap: 8, p: 2, m: "4rem 0" }}>
+          <Grid
+            item
+            xs={12}
+            sx={{
+              height: "5rem",
+              display: "flex",
+              justifyContent: "center",
+              columnGap: "4rem",
+              "button": { height: "5rem", p: "0.3rem 0.8rem", width: "12rem", backgroundColor: "#918c85", color: "white" },
+              "a": { boxShadow: "6px 6px 2px 1px rgba(0, 0, 0, 0.2)" }
+            }}
+          >
+            <Link to={"/DetailsCategories/1"} >
               <button >Fantastico y Ciencia Ficcion</button>
-          </Link>
-          <Link to={"/DetailsCategories/2"}>
-            <button >Accion y Aventuras</button>
-          </Link>
-          <Link to={"/DetailsCategories/3"}>
-            <button>Series Tv</button>
-          </Link>
-          <Link to={"/DetailsCategories/4"}>
-            <button>Drama</button>
-          </Link>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sx={{
-            height: "5rem",
-            display: "flex",
-            justifyContent: "center",
-            columnGap: "4rem",
-            "button": { height: "5rem", p: "0.3rem 0.8rem", width: "12rem", backgroundColor: "#918c85",color:"white" },
-            "a": { boxShadow: "6px 6px 2px 1px rgba(0, 0, 0, 0.2)" }
-          }}
-        >
-          <Link to={"/DetailsCategories/5"}>
-            <button>Anime</button>
-          </Link>
-          <Link to={"/DetailsCategories/6"}>
-            <button>Terror</button>
-          </Link>
-          <Link to={"/DetailsCategories/7"}>
-            <button>Infantil</button>
-          </Link>
-          <Link to={"/DetailsCategories/8"}>
-            <button>Comedia</button>
-          </Link>
-        </Grid>
-      </Grid>
-
-      <Garantias />
-
-      <footer>
-        <Grid container sx={{ backgroundColor: "#4c4d4e" }}>
-          <Grid item xs={6} sx={{ pl: 20, pt: 10, pb: 10 }}>
-            <Privacidad />
+            </Link>
+            <Link to={"/DetailsCategories/2"}>
+              <button >Accion y Aventuras</button>
+            </Link>
+            <Link to={"/DetailsCategories/3"}>
+              <button>Series Tv</button>
+            </Link>
+            <Link to={"/DetailsCategories/4"}>
+              <button>Drama</button>
+            </Link>
           </Grid>
-          <Grid item xs={6} sx={{ pl: 28, pt: 10, pb: 10 }}>
-            <Newsletter />
+          <Grid
+            item
+            xs={12}
+            sx={{
+              height: "5rem",
+              display: "flex",
+              justifyContent: "center",
+              columnGap: "4rem",
+              "button": { height: "5rem", p: "0.3rem 0.8rem", width: "12rem", backgroundColor: "#918c85", color: "white" },
+              "a": { boxShadow: "6px 6px 2px 1px rgba(0, 0, 0, 0.2)" }
+            }}
+          >
+            <Link to={"/DetailsCategories/5"}>
+              <button>Anime</button>
+            </Link>
+            <Link to={"/DetailsCategories/6"}>
+              <button>Terror</button>
+            </Link>
+            <Link to={"/DetailsCategories/7"}>
+              <button>Infantil</button>
+            </Link>
+            <Link to={"/DetailsCategories/8"}>
+              <button>Comedia</button>
+            </Link>
           </Grid>
         </Grid>
-      </footer>
+
+        <Garantias />
+
+        <footer>
+          <Grid container sx={{ backgroundColor: "#4c4d4e" }}>
+            <Grid item xs={6} sx={{ pl: 20, pt: 10, pb: 10 }}>
+              <Privacidad />
+            </Grid>
+            <Grid item xs={6} sx={{ pl: 28, pt: 10, pb: 10 }}>
+              <Newsletter />
+            </Grid>
+          </Grid>
+        </footer>
       </>
-   </Box>
+    </Box>
   );
 }

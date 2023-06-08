@@ -25,7 +25,7 @@ export default function Buscador() {
         value={pelicula}
         onChange={handleInput}
       />
-       <Link  to={`/search/${pelicula}`}> <SearchIcon sx={{ ml: 2, color:"white"}}  /></Link>
+       <Link  to={`/search/${pelicula}`}> <SearchIcon sx={{ ml: 2, color:"white"}}/></Link>
         
     </>
   );

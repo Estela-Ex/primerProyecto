@@ -3,7 +3,7 @@ import Privacidad from "../../components/Privacidad/Privacidad";
 import Navmui from "../../components/Navmui/Navmui";
 import Garantias from "../../components/Garantias/Garantias";
 import Carousel  from "../../components/Carousel/Carousel";
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 
 import DetailsHome from "./DetailsHome";
 

@@ -15,7 +15,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import Buscador from "../Buscador/Buscador";
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../../src/context/AuthContext";
-
+import Carrito from '../Carrito/Carrito'
 
 const pages = [
   { nombre: "Categorias", link: "/categories" },
@@ -142,6 +142,7 @@ function Navmui() {
                 </Button>
                 </Link>
             ))}
+            <Carrito />
           </Box>
           {user && (
             <Box sx={{ flexGrow: 0 }}>
@@ -169,7 +170,7 @@ function Navmui() {
                 }}
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
-              >
+                >
                 {Object.keys(settings).map((setting) => (
                   <MenuItem key={setting} onClick={logout}>
                     <Link to={settings[setting].link} >

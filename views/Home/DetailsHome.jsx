@@ -21,31 +21,28 @@ export default function DetailsHome() {
         tipoProductoFetch(3)
     }, [])
 
-    console.log("recomendado", recomendado)
-    console.log("tendencia", tendencia)
-    console.log("masvendidos", masvendidos)
     return (
         <Box sx={{margin:"0 auto",width:"90%"}}>
             <Typography
-                sx={{ p: 5, m: 5, textAlign: "center", textDecoration: "bold" }}
+                sx={{ p: 5, m: 5, textAlign: "center", textDecoration: "bold", color:"white" }}
                 variant="h4"
-            >Recomendados
+            >Productos Recomendados
             </Typography>
             <Grid container spacing={4} sx={{ m: 3 }}>
                 <CardsHome tipoproducto={recomendado} />
             </Grid>
             <Typography
-                sx={{ p: 5, mt: 5, textAlign: "center", textDecoration: "bold" }}
+                sx={{ p: 5, mt: 5, textAlign: "center", textDecoration: "bold", color:"white" }}
                 variant="h4"
-            >Tendencia
+            >Productos en Tendencia
             </Typography>
             <Grid container spacing={4} sx={{ m: 3 }}>
                 <CardsHome tipoproducto={tendencia} />
             </Grid>
             <Typography
-                sx={{ p: 5, mt: 5, textAlign: "center", textDecoration: "bold" }}
+                sx={{ p: 5, mt: 5, textAlign: "center", textDecoration: "bold", color:"white" }}
                 variant="h4"
-            >Mas vendidos
+            >Productos mas Vendidos
             </Typography>
             <Grid container spacing={4} sx={{ m: 3 }}>
                 <CardsHome tipoproducto={masvendidos} />

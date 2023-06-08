@@ -3,13 +3,13 @@ const userQueries = require("../services/mysqlQueries/userQueries");
 // test confirmar añadir usuario
 const userObj =
 {
-    firstname: "Maria",
+    firstname: "Felix",
     lastname: "Gutierrez Hinojsa",
     address: "calle Rio Guadame",
     city: "Málaga",
     postalcode: 29002,
-    email: "maria2@gmail.com",
-    password: 12345
+    email: "maria3@gmail.com",
+    password: Uu12345
 }
 
 
