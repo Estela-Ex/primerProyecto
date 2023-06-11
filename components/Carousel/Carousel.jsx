@@ -2,7 +2,7 @@
 import Carousel from 'react-bootstrap/Carousel'
 
 export default function Caroussel() {
-    let images = [{nombre:"spiderman",src:"../../src/assets/spiderman.jpg"},{nombre:"transformes",src:"../../src/assets/transformes.jpeg"},{nombre:"star wars",src:"../../src/assets/star wars.jpg"}]
+    let images = [{nombre:"Avatar 2",src:"../../src/assets/avatar 2.jpg"},{nombre:"star wars",src:"../../src/assets/star wars.jpg"},{nombre:"guardianes",src:"../../src/assets/guardianes.jpeg"}]
   return (
       <>
     <Carousel>

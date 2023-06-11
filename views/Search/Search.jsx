@@ -26,9 +26,9 @@ export default function Search() {
                     <Navmui />
                 </Grid>
             </Grid>
-            <Grid container spacing={4}>
-            </Grid>
+            <Grid container spacing={4} sx={{p:3}}>
             <CardsHome tipoproducto={ result} />
+            </Grid>
             <Garantias size={48} color={"pink"} />
             <footer>
                 <Grid container sx={{ backgroundColor: "#4c4d4e" }}>

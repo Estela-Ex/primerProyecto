@@ -25,7 +25,7 @@ export default function BasicFormLogin() {
   });
   return (
     <>
-      <Typography variant="h5" sx={{ textAlign: "center", color:"#fff" }}>
+      <Typography variant="h5" sx={{ textAlign: "center", color:"#495057" }}>
         Inicia Sesión
       </Typography>
       <form onSubmit={handleSubmit}>
@@ -36,7 +36,7 @@ export default function BasicFormLogin() {
             p: 2,
             border: "1px solid grey",
             borderRadius: 2,
-            color: "white"
+            color: "#495057"
           }}
         >
           <TextField
@@ -47,7 +47,7 @@ export default function BasicFormLogin() {
             onChange={handleChange}
             onBlur={handleBlur}
             size="small"
-            sx={{ mb: 2, label:{color:"white"},fieldset:{borderColor:"white"} }}
+            sx={{ mb: 2, label:{color:"#495057"},fieldset:{borderColor:"#495057"} }}
             error={errors.email && touched.email}
             helperText={errors.email}
             
@@ -61,7 +61,7 @@ export default function BasicFormLogin() {
             onChange={handleChange}
             onBlur={handleBlur}
             size="small"
-            sx={{ mb: 2 ,label:{color:"white"}, fieldset:{borderColor:"white"}}}
+            sx={{ mb: 2 ,label:{color:"#495057"}, fieldset:{borderColor:"#495057"}}}
             error={errors.password && touched.password}
             helperText={errors.password}
           />

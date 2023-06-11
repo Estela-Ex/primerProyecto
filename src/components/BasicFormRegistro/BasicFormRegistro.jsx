@@ -43,7 +43,7 @@ export default function BasicFormRegistro() {
 
   return (
     <>
-      <Typography variant="h5" sx={{ textAlign: "center",color:"#fff" }}>
+      <Typography variant="h5" sx={{ textAlign: "center",color:"#495057" }}>
         Registro
       </Typography>
       <form onSubmit={handleSubmit}>
@@ -54,7 +54,7 @@ export default function BasicFormRegistro() {
             p: 2,
             border: "1px solid grey",
             borderRadius: 2,
-            color: "white"
+            color: "#495057"
           }}
         >
           <Grid item xs={12}>
@@ -67,7 +67,7 @@ export default function BasicFormRegistro() {
               onChange={handleChange}
               onBlur={handleBlur}
               size="small"
-              sx={{ mb: 2, m: 1.2, width: "47%" ,label:{color:"white"}, fieldset:{borderColor:"white"}}}
+              sx={{ mb: 2, m: 1.2, width: "47%" ,label:{color:"#495057"}, fieldset:{borderColor:"#495057"}}}
               error={errors.firstname && touched.firstname}
               helperText={errors.firstname}
             />
@@ -80,7 +80,7 @@ export default function BasicFormRegistro() {
               onChange={handleChange}
               onBlur={handleBlur}
               size="small"
-              sx={{ mb: 2, m: 1.2, width: "47%" ,label:{color:"white"}, fieldset:{borderColor:"white"}}}
+              sx={{ mb: 2, m: 1.2, width: "47%" ,label:{color:"#495057"}, fieldset:{borderColor:"#495057"}}}
               error={errors.lastname && touched.lastname}
               helperText={errors.lastname}
             />
@@ -95,7 +95,7 @@ export default function BasicFormRegistro() {
               onChange={handleChange}
               onBlur={handleBlur}
               size="small"
-              sx={{ mb: 2, m: 1.2, width: "47%",label:{color:"white"}, fieldset:{borderColor:"white"} }}
+              sx={{ mb: 2, m: 1.2, width: "47%",label:{color:"#495057"}, fieldset:{borderColor:"#495057"} }}
               error={errors.address && touched.address}
               helperText={errors.address}
             />
@@ -108,7 +108,7 @@ export default function BasicFormRegistro() {
               onChange={handleChange}
               onBlur={handleBlur}
               size="small"
-              sx={{ mb: 2, m: 1.2, width: "47%",label:{color:"white"}, fieldset:{borderColor:"white"} }}
+              sx={{ mb: 2, m: 1.2, width: "47%",label:{color:"#495057"}, fieldset:{borderColor:"#495057"} }}
               error={errors.city && touched.city}
               helperText={errors.city}
             />
@@ -123,7 +123,7 @@ export default function BasicFormRegistro() {
               onChange={handleChange}
               onBlur={handleBlur}
               size="small"
-              sx={{ mb: 2, m: 1.2, width: "47%" ,label:{color:"white"}, fieldset:{borderColor:"white"}}}
+              sx={{ mb: 2, m: 1.2, width: "47%" ,label:{color:"#495057"}, fieldset:{borderColor:"#495057"}}}
               error={errors.postalCode && touched.postalCode}
               helperText={errors.postalCode}
             />
@@ -136,7 +136,7 @@ export default function BasicFormRegistro() {
               onChange={handleChange}
               onBlur={handleBlur}
               size="small"
-              sx={{ mb: 2, m: 1.2, width: "47%" ,label:{color:"white"}, fieldset:{borderColor:"white"}}}
+              sx={{ mb: 2, m: 1.2, width: "47%" ,label:{color:"#495057"}, fieldset:{borderColor:"#495057"}}}
               error={errors.email && touched.email}
               helperText={errors.email}
             />
@@ -151,7 +151,7 @@ export default function BasicFormRegistro() {
               onChange={handleChange}
               onBlur={handleBlur}
               size="small"
-              sx={{ mb: 2, m: 1.2, width: "47%" ,label:{color:"white"}, fieldset:{borderColor:"white"}}}
+              sx={{ mb: 2, m: 1.2, width: "47%" ,label:{color:"#495057"}, fieldset:{borderColor:"#495057"}}}
               error={errors.password && touched.password}
               helperText={errors.password}
             />
@@ -164,7 +164,7 @@ export default function BasicFormRegistro() {
               onChange={handleChange}
               onBlur={handleBlur}
               size="small"
-              sx={{ mb: 2, m: 1.2, width: "47%" ,label:{color:"white"}, fieldset:{borderColor:"white"}}}
+              sx={{ mb: 2, m: 1.2, width: "47%" ,label:{color:"#495057"}, fieldset:{borderColor:"#495057"}}}
               error={errors.passwordRepeat && touched.passwordRepeat}
               helperText={errors.passwordRepeat}
             />

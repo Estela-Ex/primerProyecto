@@ -17,7 +17,7 @@ export default function DetailsHome() {
     return (
         <Box sx={{margin:"0 auto",width:"90%"}}>
             <Typography
-                sx={{ p: 5, m: 5, textAlign: "center", textDecoration: "bold", color:"white" }}
+                sx={{ p: 5, m: 5, textAlign: "center", textDecoration: "bold", color:"#495057" }}
                 variant="h4"
             >Productos Recomendados
             </Typography>
@@ -25,7 +25,7 @@ export default function DetailsHome() {
                 <CardsHome tipoproducto={recomendado} />
             </Grid>
             <Typography
-                sx={{ p: 5, mt: 5, textAlign: "center", textDecoration: "bold", color:"white" }}
+                sx={{ p: 5, mt: 5, textAlign: "center", textDecoration: "bold", color:"#495057" }}
                 variant="h4"
             >Productos en Tendencia
             </Typography>
@@ -33,7 +33,7 @@ export default function DetailsHome() {
                 <CardsHome tipoproducto={tendencia} />
             </Grid>
             <Typography
-                sx={{ p: 5, mt: 5, textAlign: "center", textDecoration: "bold", color:"white" }}
+                sx={{ p: 5, mt: 5, textAlign: "center", textDecoration: "bold", color:"#495057" }}
                 variant="h4"
             >Productos mas Vendidos
             </Typography>

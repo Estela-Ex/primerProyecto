@@ -21,7 +21,7 @@ const pages = [
   { nombre: "Categorias", link: "/categories" },
   { nombre: "Login", link: "/Login" }
 ];
-const settings =  [{nombre:"Logout"}] ;
+const settings = [{ nombre: "Logout" }];
 
 function Navmui() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -43,10 +43,10 @@ function Navmui() {
     setAnchorElUser(null);
   };
 
-  
+
   return (
-    <AppBar sx={{backgroundColor:"#4c4d4e"}} position="static">
-      <Container maxWidth="xl">
+    <AppBar sx={{ backgroundColor: "#4c4d4e" }} position="static">
+      <Container sx={{ width: "100% !important", maxWidth:"unset !important", p: 0, m: 0 , ">div":{width: "100% !important"}}}>
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
@@ -132,7 +132,7 @@ function Navmui() {
             }}
           >
             {pages.map((page) => (
-              <Link to={page.link} style={{textDecoration:'none'}}>
+              <Link to={page.link} style={{ textDecoration: 'none' }}>
                 <Button
                   key={page.nombre}
                   onClick={handleCloseNavMenu}
@@ -140,20 +140,21 @@ function Navmui() {
                 >
                   {page.nombre}
                 </Button>
-                </Link>
+              </Link>
             ))}
-            <Box >
-              <Carrito />
-              </Box>
+
+
+
           </Box>
           {user && (
-            <Box sx={{ flexGrow: 0 }}>
+            <Box sx={{ flexGrow: 0, display: "flex !important", justifyContent: "space-between", position:"relative",left:0, ">button": { ml: "8rem" } }}>
+              <Carrito />
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Avatar
                     alt="Remy Sharp"
                     height="100%"
-                    src="../src/assets/vinilos-infantiles-genio-aladdin.jpg"
+                    src="../src/assets/palomitas1.jpg"
                   />
                 </IconButton>
               </Tooltip>
@@ -172,14 +173,14 @@ function Navmui() {
                 }}
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
-                >
+              >
                 {Object.keys(settings).map((setting) => (
                   <MenuItem key={setting} onClick={logout}>
                     <Link to={settings[setting].link} >
                       {settings[setting].label}Logout
                     </Link>
                   </MenuItem>
-                 ))}
+                ))}
               </Menu>
             </Box>
           )}

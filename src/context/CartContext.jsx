@@ -23,13 +23,17 @@ export default function CartContextProvider({ children }) {
         setCarrito(carrito + 1)
     }
     function handleRemove(id) {
-        const newCarrito = resultCarrito.map((elem) => {
+        const newCarrito = []
+        resultCarrito.forEach((elem) => {
             if (elem.id === id && elem.count > 0) {
-                elem.count -= 1
                 setCarrito(carrito - 1)
-
+                if (elem.count === 1) {
+                    return 
+                } else {
+                    elem.count -= 1
+                }
             }
-            return elem
+            return newCarrito.push(elem)
         })
         setResultCarrito(newCarrito)
     }

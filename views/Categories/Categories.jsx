@@ -8,7 +8,7 @@ import Privacidad from "../../components/Privacidad/Privacidad";
 
 export default function Categories() {
   return (
-    <Box className="background-image" sx={{ backgroundImage: 'url("../../src/assets/marvel.jpg")' }}>
+    <Box className="background-image" sx={{ backgroundImage: 'url("../../src/assets/piratas.jpg")' }}>
       <>
         <Grid container spacing={2} justifyContent="center" alignItems="center">
           <Grid item xl={12}>
@@ -27,7 +27,7 @@ export default function Categories() {
               display: "flex",
               justifyContent: "center",
               columnGap: "4rem",
-              "button": { height: "5rem", p: "0.3rem 0.8rem", width: "12rem", backgroundColor: "#918c85", color: "white" },
+              "button": { height: "5rem", p: "0.3rem 0.8rem", width: "12rem", backgroundColor: "#c1bfbb", color: "black" },
               "a": { boxShadow: "6px 6px 2px 1px rgba(0, 0, 0, 0.2)" }
             }}
           >
@@ -52,7 +52,7 @@ export default function Categories() {
               display: "flex",
               justifyContent: "center",
               columnGap: "4rem",
-              "button": { height: "5rem", p: "0.3rem 0.8rem", width: "12rem", backgroundColor: "#918c85", color: "white" },
+              "button": { height: "5rem", p: "0.3rem 0.8rem", width: "12rem", backgroundColor: "#c1bfbb", color: "black" },
               "a": { boxShadow: "6px 6px 2px 1px rgba(0, 0, 0, 0.2)" }
             }}
           >
